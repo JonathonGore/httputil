@@ -15,7 +15,7 @@ func Success(w http.ResponseWriter) {
 
 // HandleError is a utility function to responsd to a response writer with
 // the given message and error code.
-func HandleError(w http.ResponseWriter, message string, code int) {
+func Error(w http.ResponseWriter, message string, code int) {
 	w.WriteHeader(code)
 	w.Write(JSON(ErrorResponse{message, code}))
 }
