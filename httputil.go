@@ -7,10 +7,11 @@ import (
 	"net/http"
 )
 
-// Success is a utility function to write a JSON response
-// indicating a successful operation.
+// Success writes a JSON response object with a single message key indicating
+// success. No status code is written as this gives more flexibility, due to
+// the fact that Golang http response defaults to 200 if no status code is written.
 func Success(w http.ResponseWriter) {
-	w.Write(JSON(SuccessResponse{Message: "success", Code: 200}))
+	w.Write(JSON(SuccessResponse{Message: "success", Code: http.StatusOK}))
 }
 
 // HandleError is a utility function to responsd to a response writer with
