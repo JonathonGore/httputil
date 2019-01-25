@@ -14,7 +14,7 @@ func Success(w http.ResponseWriter) {
 	w.Write(JSON(SuccessResponse{Message: "success", Code: http.StatusOK}))
 }
 
-// HandleError is a utility function to responsd to a response writer with
+// Error is a utility function to responsd to a response writer with
 // the given message and error code.
 func Error(w http.ResponseWriter, message string, code int) {
 	w.WriteHeader(code)
