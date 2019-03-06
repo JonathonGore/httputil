@@ -6,4 +6,5 @@ const (
 	JSONParseError        = "unable to parse object as JSON"
 	MalformedRequestError = "malformed request"
 	NotFoundError         = "not found"
+    UnauthorizedError     = "unauthorized"
 )
